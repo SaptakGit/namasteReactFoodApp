@@ -79,10 +79,19 @@ There are two approaches on How the UI data fetach from baeckend.
     2. As soon as the page load we will render the UI after that we will make as API call and as soon as we get data from the API we will re-render the API with new data.
     Loads --> Render --> API --> Re-Render 
 
-useEffect hook: it comes with two arguments
-1. callback function
-2. dependency array
-it is called after body component is rendered. If we have to do something after rendering we have to write it inside useEffect.
+useState hook:
+    It is used for creating local State Variable inside th component. Never call useState out side of the component. Always create it at top. Never create it inside if-else condition/for loop/function.
+
+useEffect hook: 
+    It comes with two arguments
+    1. callback function
+    2. dependency array (not mandetory)
+    it is called every time after the component is rendered. But because of the dependancy arry the behaviour of the render will changed. 
+    a) If no dependancy arry => useEffect is called on every render.
+    b) If the dependancy array is empty = [] => useEffect is called on initial render just once.
+    c) If the dependancy array is not empty => useEffect is called on everytime whenever the array is updated.
+
+    If we have to do something after rendering we have to write it inside useEffect.
 
 fetch() is browser function given by javascript.
 
@@ -94,3 +103,12 @@ conditional rendering: if we have an condition and render on besis of that condi
 
 Why dowe need State veriable: 
     Suppose we want to change the name of a button from Login to Logout whenever we click it. If we use a normal JS let veriable with a callback function, the variable will get changed but the UI will not rendered. That why we use local State variable.So that he UI gets changed whenever we update the veriable. 
+
+React Router Dom:
+    npm install react-router-dom@6
+
+    Two types of routing in web-app
+    1. Clicnt side routing -> did not make any network calls and do not load the hole page
+    2. Server side routing -> make network calls and reloads the whole page
+
+Link is a wraper over anchor tag.
