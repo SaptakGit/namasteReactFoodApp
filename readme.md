@@ -48,16 +48,16 @@ React Hook is a normal javascript utility function which is given to us by React
  - useState() - Superpowerfull State Variables.
  - useEffect()
 
-Whenever a state variable update React re-rander the component.
+Whenever a State Variable update React re-rander the component.
 
 
 Reconciliation Algorithm(React Fiber):
     Whenever there is change in UI it is known as Reconciliation.
-    In React 16 a new algorithm (React Fiber) is come to update the DOM.
+    In React 16 a new algorithm (React Fiber) is come to update the DOM. It uses Diff Algorithm to compare the OLD and NEW Virtual DOM and updates only that portion of the DOM which has been changed or updated.
      
     Virtual DOM : Representation of an actual DOM. It is besically the React Elements,the object which is given by React by createElement.
 
-    Diff Algorithm: It find out the differance between two virtual DOM(Old Virtual DOM and updated virtual DOM) and update the DOM.
+    Diff Algorithm: It find out the differance between two virtual DOM(Old Virtual DOM and updated virtual DOM) and updates only that portion of the DOM which has been changed or updated.
 
     Incremental Rendering: The ability to split the rendering work in different chunks over multiple frames.
 
@@ -74,5 +74,23 @@ Monolith & Microservice Architecture
 
 There are two approaches on How the UI data fetach from baeckend.
     1.As soon as our page load we can make a call to the API and when we get the data we can render the UI.
+    Loads --> API --> Render 
 
     2. As soon as the page load we will render the UI after that we will make as API call and as soon as we get data from the API we will re-render the API with new data.
+    Loads --> Render --> API --> Re-Render 
+
+useEffect hook: it comes with two arguments
+1. callback function
+2. dependency array
+it is called after body component is rendered. If we have to do something after rendering we have to write it inside useEffect.
+
+fetch() is browser function given by javascript.
+
+Allow CORS: Access-Control-Allow-Origin: Chrome extention
+
+Shimmer UI
+
+conditional rendering: if we have an condition and render on besis of that condition then it is called as conditional rendeting.
+
+Why dowe need State veriable: 
+    Suppose we want to change the name of a button from Login to Logout whenever we click it. If we use a normal JS let veriable with a callback function, the variable will get changed but the UI will not rendered. That why we use local State variable.So that he UI gets changed whenever we update the veriable. 
