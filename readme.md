@@ -116,3 +116,9 @@ Link is a wraper over anchor tag.
 
 Class based Components:
     Older ways to to create components.
+
+     The class based component is a class that extends the React.Component and it has a render method that return some piece of JSX.
+
+     In Class based Components, to get the props we have to write a constructor. Inside the constructor we have to use the key-word super to access the props.
+
+     Why dowe write super propos ? H.W
