@@ -117,8 +117,18 @@ Link is a wraper over anchor tag.
 Class based Components:
     Older ways to to create components.
 
-     The class based component is a class that extends the React.Component and it has a render method that return some piece of JSX.
+    The class based component is a class that extends the React.Component and it has a render method that return some piece of JSX.
 
-     In Class based Components, to get the props we have to write a constructor. Inside the constructor we have to use the key-word super to access the props.
+    In Class based Components, to get the props we have to write a constructor. Inside the constructor we have to use the key-word super to access the props.
 
-     Why dowe write super propos ? H.W
+    Why dowe write super propos ? H.W
+
+    Whenever the class in created this constuctor is called now we can use this props anywhere in the class.
+
+    When a class instance is created the State is created.When a class instance is created first the constructor is created. So it is the best place to receive props,creating State. There is no hooks in class based components. We use this.state to create state variable.
+
+    The state is basically an object which contain all the state variables.
+
+
+
+    Render method will return some piece of JSX.
