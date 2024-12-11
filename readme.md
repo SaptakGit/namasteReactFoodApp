@@ -125,10 +125,38 @@ Class based Components:
 
     Whenever the class in created this constuctor is called now we can use this props anywhere in the class.
 
-    When a class instance is created the State is created.When a class instance is created first the constructor is created. So it is the best place to receive props,creating State. There is no hooks in class based components. We use this.state to create state variable.
+    When a class instance is created the State is created.When a class instance is created first the constructor is called. So it is the best place to receive props,creating State. There is no hooks in class based components. We use this.state to create state variable.
 
     The state is basically an object which contain all the state variables.
 
+    We will never update oue state variable directly by putting a = sign. ****** WRONG -> this.state.count = this.state.count + 1 ******
 
+    React gives us a function called setState() to update the state variable. we can use it any where inside the class.
+
+    If there are multiple state variable declared, React will only look for the variable that are passed from the setState and updates only those variables. It will not touch other variables.
+
+
+    Life Cycle of Class Based Component:
+        When a Class Based Component is called First the constructor is called, then the render.
+        If the parent is also a Class Beased Component then the calling be like...
+        1st - Parent Constructor
+        2nd - Parent Render
+        3rd - Child Constructor
+        4th - Child Render
+
+        It has another Important method given by React called componentDidMount(). It is called after the Render, when the component is alredy mounted on the web page.If the parent also have componentDidMount(), then the calling will be like...
+        1st - Parent Constructor
+        2nd - Parent Render
+        3rd - Child Constructor
+        4th - Child Render
+        5th - Child componentDidMount
+        6th - Parent componentDidMount
+        So besically when the child Life Cycle is completed completly then the Parent componentDidMount will be called.
+        
+        componentDidMount() : 
+            It is use to make API call.
+            In Funcetio Based Components we use useEffect to call an API with a blank dependancy array so that it calls the API only once and it work in 
+            "Loads --> Render --> API --> Re-Render" this model. Similarly here also we call the API inside the componentDidMount() method so that first it renders the besic detail, calls the API and re-render and follow the "Loads --> Render --> API --> Re-Render" process.
+  
 
     Render method will return some piece of JSX.
