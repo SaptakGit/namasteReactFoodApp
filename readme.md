@@ -224,3 +224,10 @@ WAYS TO WRITE STYLE
 
 Higher Order Component:
     It is a normal JavaScript Function which takes a component as input and adds some extra features to it return the component.
+
+Controlled & Uncontrolled Component:
+    When a Component has its own control and is not controlled by its parent it is an Uncontrolled Component.
+
+    When a Component does not has its own control and is controlled by its parent it is an Controlled Component.
+
+Lifting The State Up => HW
