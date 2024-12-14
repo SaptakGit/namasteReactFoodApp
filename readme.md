@@ -203,3 +203,22 @@ App Chunking:
 
     For that we will not call our component directly, we will call that using lazy loading. Actually by this initially the component code will not be called. It will call it only when we go to that component.
     We use <Suspense> with Lazy Loading, it holds React while thecomponent is being lazy loaded. otherwise React will throw an Error.
+
+WAYS TO WRITE STYLE
+    1. Normal CSS
+    2. Scss/Sass:(not recomemded)
+            It is like writeing css with superpowere
+    3. Styled Component:
+    4. STYLE Libraries/UI Framework
+            1. Meterial UI
+            2. Bootstrap
+            3. Chakra UI
+            4. Ant Design
+    5. Tailwind
+
+    How to install
+        1.go to Tailwind css website
+        2.go to Framework Guides
+        3.choose Parcel
+        4.follow the steps (skip setp-1: since we already have a project). Tailwind uses PostCSS in behind. PostCSS is a tool for transforming CSS with JavaScript. Parcel will use PostCSS to read Tailwind.
+

@@ -40,13 +40,13 @@ const Body = () => {
 
     return listofRestaurent.length === 0 ? (<Shimmer />):(
         <div className="body">
-            <div className="filter">
-                <div className="search">
+            <div className="flex">
+                <div className="search m-4 p-4">
                     {/*The input box is bind to the State Variable.So if we type something inside the text box it will not show since the State Variable is set as empty. For that we use an onChange function which will update the State Variable and we can see what we type inside the text box*/}
-                    <input type="text" className="search-box" value={searchText} onChange={(e)=>{
+                    <input type="text" className="border border-solid border-black" value={searchText} onChange={(e)=>{
                         setSearchText(e.target.value);
                     }}/>
-                    <button onClick={() =>{
+                    <button className="px-4 py-2 bg-green-100 m-4 rounded-lg" onClick={() =>{
                         // We want to filter the restrocard and update the UI
                         // To track the value of the input box, whatever the user is typing,to get that value we need to bind this value with a local state variable in React.
                         console.log(searchText);
@@ -56,14 +56,16 @@ const Body = () => {
                         setFilteredRestaurent(filteredRestaurent)
 ;                    }}>Search</button>
                 </div>
-                <button className="filter-btn" onClick={() => {
-                    filteredList = listofRestaurent.filter(res => res.card.card.info.avgRating > 4);
-                    setListOfRestaurent(filteredList);
-                }}>
-                    Top Rated Restaurent
-                </button>
+                <div className="search m-4 p-4 flex items-center">
+                    <button className="px-4 py-2 bg-gray-100 rounded-lg" onClick={() => {
+                        filteredList = listofRestaurent.filter(res => res.card.card.info.avgRating > 4);
+                        setListOfRestaurent(filteredList);
+                    }}>
+                        Top Rated Restaurent
+                    </button>
+                </div>
             </div>
-            <div className="res-container">
+            <div className="flex flex-wrap">
                 {filteredRestaurent.map(restaurent => ( <Link to={"/restaurent/" + restaurent.card.card.info.id} key={restaurent.card.card.info.id}><RestaurentCard resData={restaurent}/> </Link>
                 ))}
             </div>
