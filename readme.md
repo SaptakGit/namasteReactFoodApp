@@ -196,3 +196,10 @@ Single Responsibility Principle:
     Single component must do single task.Big module must break into small modules.Easy to bug fix.Code become Reuseable,Maintainable,Testable.
 
 Custom Hooks: Makes uor app more Reuseable,Maintainable,Testable.
+
+App Chunking:
+    Break down our app into smaller pieces instead of one large js file that parcel does while it bundle-up our app.
+    We need to break it into smaller bundle.This process is known as Chunking/Code Spliting/Dynamic Bundling/Lazy Loading/On Demand Loading/Dynamic Import.
+
+    For that we will not call our component directly, we will call that using lazy loading. Actually by this initially the component code will not be called. It will call it only when we go to that component.
+    We use <Suspense> with Lazy Loading, it holds React while thecomponent is being lazy loaded. otherwise React will throw an Error.
