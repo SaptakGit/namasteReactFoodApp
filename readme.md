@@ -222,3 +222,5 @@ WAYS TO WRITE STYLE
         3.choose Parcel
         4.follow the steps (skip setp-1: since we already have a project). Tailwind uses PostCSS in behind. PostCSS is a tool for transforming CSS with JavaScript. Parcel will use PostCSS to read Tailwind.
 
+Higher Order Component:
+    It is a normal JavaScript Function which takes a component as input and adds some extra features to it return the component.

@@ -1,4 +1,4 @@
-import RestaurentCard from "./RestaurentCard";
+import RestaurentCard, { withPromotedLabel } from "./RestaurentCard";
 import Shimmer from "./Shimmer"
 import { Link } from "react-router-dom";
 
@@ -12,6 +12,8 @@ const Body = () => {
     const [filteredRestaurent, setFilteredRestaurent] = useState([]);
 
     const [searchText, setSearchText] = useState("");
+
+    const RestaurentCardPromoted = withPromotedLabel(RestaurentCard);
 
     useEffect(()=>{
         //console.log("Use Effect Called");
@@ -27,6 +29,8 @@ const Body = () => {
         //optional chaning 
         setListOfRestaurent(json?.data?.cards?.slice(3));
         setFilteredRestaurent(json?.data?.cards?.slice(3));
+
+        //console.log(json?.data?.cards?.slice(3));
     };
 
     //conditional rendering
@@ -66,7 +70,14 @@ const Body = () => {
                 </div>
             </div>
             <div className="flex flex-wrap">
-                {filteredRestaurent.map(restaurent => ( <Link to={"/restaurent/" + restaurent.card.card.info.id} key={restaurent.card.card.info.id}><RestaurentCard resData={restaurent}/> </Link>
+                {filteredRestaurent.map(restaurent => ( <Link to={"/restaurent/" + restaurent.card.card.info.id} key={restaurent.card.card.info.id}>
+                {/* If a restaurent is promoted then add a promoted tag to it */}
+                {restaurent.card.card.info.promoted ? (
+                    <RestaurentCardPromoted resData={restaurent}/>
+                ) : (
+                    <RestaurentCard resData={restaurent}/> 
+                )}
+                </Link>
                 ))}
             </div>
         </div>
