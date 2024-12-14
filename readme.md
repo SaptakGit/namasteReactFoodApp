@@ -191,3 +191,8 @@ Class based Components:
     wht async useEffect() --> ERROR ?
 
     Render method will return some piece of JSX.
+
+Single Responsibility Principle:
+    Single component must do single task.Big module must break into small modules.Easy to bug fix.Code become Reuseable,Maintainable,Testable.
+
+Custom Hooks: Makes uor app more Reuseable,Maintainable,Testable.
