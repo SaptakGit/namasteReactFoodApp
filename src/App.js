@@ -10,6 +10,9 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Shimmer from "./components/Shimmer";
 //import Grocery from "./components/Grocery";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux"; // bridge between redux-toolkit and React made by react-redux
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 // Lazy Loading
 const Grocery = lazy(() => import("./components/Grocery"));
@@ -28,12 +31,14 @@ const AppLayout = () =>{
     },[]);
 
     return (
+        <Provider store={appStore}>
         <UserContext.Provider value={{loggedInUser:userName, setUserName}}>
             <div className="app">
-                <Header />
+                <Header /> 
                 <Outlet />
             </div>
-        </UserContext.Provider>
+            </UserContext.Provider>
+        </Provider>
     );
 };
 
@@ -61,6 +66,10 @@ const appRouter = createBrowserRouter([
             {
                 path : "/restaurent/:resId",
                 element : <RestaurentMenu />
+            },
+            {
+                path : "/cart",
+                element : <Cart />
             },
         ],
         errorElement : <Error />,

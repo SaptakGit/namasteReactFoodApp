@@ -242,4 +242,40 @@ Props Drilling:
 
     Context Provider
 
+Redux:
+    Redux is not React It has Separate Library React has separate library.Using Redux in not mandetory.
+    Alternet Data Management Library other than Redux is Zustand.
+    Redux have two Library 
+        1. Redux Toolkit -> A new way to write Redux. 
+        2. React Redux
+
+        1. Redux toolkit Architechture:
+            Redux Store is nothing but a big JS Object and it is kept in a central place.We keep our most data inside it so that we can access it from anywhere. We use Slices in the Redux Store to separate data into logical separation and easy access of the data.
+            Add datat to slice is not possible Directly.
+            If we click on Add button to add, it Dispatches an action, it calls a function, and this function modifies the data in the slice. This function is known as Reducer. 
+            To read data we use something known as Selector.
+            and the Selector gives us the modified data. This read data using Selector fenomena in known as "Subscribing to the Store". The selector is besically a Hook inside react.Always Subscribe to a specific portion to the store.
+            In older redux(Vanila Redux) Mutation of State is prohabited.So we have to make a copy of the store, make changes to the copy and return it. But with Redux Toolkit we are now have to mutate the state. and behind the scean Redux use ImmerJs and does the same old way of vanila redux.
+            Inside redux console.log(state) is not possible so we have to do console.log(current(state)), this current comes from redux-toolkit.
+            
+            Redux-dev tools
+            Older Redux -> Middleware, Thunks
+            Redux-Toolkit -> RTK Query (H.W)
+
+
+    Steps In our App
+    - Install Redux Toolkit(@reduxjs/toolkit) and React Redux(react-redux)
+    - Build our store
+    - Connect our store to our App 
+    - Create a slice(cartSlice)
+    - Dispatch(action)
+    - Read the data with Selector
+
+H.W => Diff Between
+onclick = addItem
+onclick = () => addItem(item)
+onclick = addItem(item)
+
+-1.11
+
 
