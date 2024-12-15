@@ -276,6 +276,28 @@ onclick = addItem
 onclick = () => addItem(item)
 onclick = addItem(item)
 
--1.11
+Developer can do two type of Testing:
+1. Manual Testing
+2. Writing the test case
+    1. Unit Testing:
+        You test your React application in Isolation. It is basically testing of a small pert/ specific part of the app, eg. Header Component.
+    2. Integration testing:
+        Testing the Integration of the components. The flow between the components.
+    3. End To End testing - e2e Testing:
+        It starts as soon as user lands on the app to all the flow of the App. Besically it check how the user will flow in the App
 
+React Testing Library ()
+    React Testing Library builds on top of DOM Testing Library by adding APIs for working with React components. The React Testing Library uses Jest behind the scene.
+
+    Setting up testing
+    1. intall React Testing Library
+    2. install jest
+    3. install babel dependencies
+    4. configure bable
+    5. Configure Parcel config file to use disable default babel transpilation
+    6. Jest Configuration -> npx jest --init
+    7. install jsdom library
+
+
+Resume 1.10
 
