@@ -231,3 +231,15 @@ Controlled & Uncontrolled Component:
     When a Component does not has its own control and is controlled by its parent it is an Controlled Component.
 
 Lifting The State Up => HW
+
+Props Drilling:
+    React have one-way data flow. So if we have to pass a data from grandparent to grandchild we have to pass it through parent. This is known as props drilling.
+
+    We can avoid Props Drilling by using React Context. With React Context we can access data from any where in our App. We hold the data inside a Context and we access that context anywhere in our App.
+
+    useContext hook to use Context in Functional Component
+    <UserContext.Consumer>  to use Context in Class based Component
+
+    Context Provider
+
+
