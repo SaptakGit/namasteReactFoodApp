@@ -1,4 +1,4 @@
-import {CDN_URL} from "../utils/constants/";
+import { CDN_URL } from "../utils/constants";
 
 const styleCard={
     backgroundColor: "#f0f0f0"
@@ -7,7 +7,7 @@ const styleCard={
 
 const RestaurentCard = (props) =>{
     const {resData} = props;
-
+    
     const {
         cloudinaryImageId,
         name,
