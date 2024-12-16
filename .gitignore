@@ -5,3 +5,4 @@
 *.tar.gz
 *.iso
 /git_exclude
+/coverage

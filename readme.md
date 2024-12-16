@@ -297,7 +297,12 @@ React Testing Library ()
     5. Configure Parcel config file to use disable default babel transpilation
     6. Jest Configuration -> npx jest --init
     7. install jsdom library
+    8. install @babel/preset-react - to make JSX work inside test cases.
+    9. include @babel/preset-react inside our babel config
+    10. inatall @testing-library/jest-dom
+
+Besic Logic:
+    We Render Somethig -> We Query Something -> We Assert Something.
 
 
-Resume 1.10
 
