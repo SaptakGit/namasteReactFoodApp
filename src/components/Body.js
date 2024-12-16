@@ -50,7 +50,7 @@ const Body = () => {
             <div className="flex">
                 <div className="search m-4 p-4">
                     {/*The input box is bind to the State Variable.So if we type something inside the text box it will not show since the State Variable is set as empty. For that we use an onChange function which will update the State Variable and we can see what we type inside the text box*/}
-                    <input type="text" className="border border-solid border-black" value={searchText} onChange={(e)=>{
+                    <input type="text" data-testid = "searchInput" className="border border-solid border-black" value={searchText} onChange={(e)=>{
                         setSearchText(e.target.value);
                     }}/>
                     <button className="px-4 py-2 bg-green-100 m-4 rounded-lg" onClick={() =>{
@@ -61,7 +61,7 @@ const Body = () => {
                     );
 
                         setFilteredRestaurent(filteredRestaurent)
-;                    }}>Search</button>
+;                    }} >Search</button>
                 </div>
                 <div className="search m-4 p-4 flex items-center">
                     <button className="px-4 py-2 bg-gray-100 rounded-lg" onClick={() => {

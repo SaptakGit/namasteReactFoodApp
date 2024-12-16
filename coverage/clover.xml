@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1734329246144" clover="3.2.0">
-  <project timestamp="1734329246146" name="All files">
-    <metrics statements="16" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3" elements="21" coveredelements="17" complexity="0" loc="16" ncloc="16" packages="2" files="4" classes="4"/>
-    <package name="components">
-      <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
-      <file name="Contact.js" path="E:\EXPLORE-GIT-COURSE\namasteReactSwiggyApp\src\components\Contact.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="4" type="stmt"/>
-      </file>
-      <file name="RestaurentCard.js" path="E:\EXPLORE-GIT-COURSE\namasteReactSwiggyApp\src\components\RestaurentCard.js">
-        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-      </file>
-      <file name="sum.js" path="E:\EXPLORE-GIT-COURSE\namasteReactSwiggyApp\src\components\sum.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="utils">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="constants.js" path="E:\EXPLORE-GIT-COURSE\namasteReactSwiggyApp\src\utils\constants.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-      </file>
-    </package>
+<coverage generated="1734333906600" clover="3.2.0">
+  <project timestamp="1734333906600" name="All files">
+    <metrics statements="33" coveredstatements="26" conditionals="6" coveredconditionals="5" methods="13" coveredmethods="7" elements="52" coveredelements="38" complexity="0" loc="33" ncloc="33" packages="1" files="2" classes="2"/>
+    <file name="Body.js" path="E:\EXPLORE-GIT-COURSE\namasteReactSwiggyApp\src\components\Body.js">
+      <metrics statements="24" coveredstatements="17" conditionals="6" coveredconditionals="5" methods="10" coveredmethods="4"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="11" count="4" type="stmt"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="15" count="4" type="stmt"/>
+      <line num="17" count="4" type="stmt"/>
+      <line num="19" count="4" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="24" count="4" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="42" count="4" type="stmt"/>
+      <line num="44" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="46" count="4" type="stmt"/>
+      <line num="48" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="54" count="0" type="stmt"/>
+      <line num="59" count="0" type="stmt"/>
+      <line num="60" count="0" type="stmt"/>
+      <line num="63" count="0" type="stmt"/>
+      <line num="68" count="0" type="stmt"/>
+      <line num="69" count="0" type="stmt"/>
+      <line num="76" count="0" type="stmt"/>
+      <line num="81" count="14" type="stmt"/>
+    </file>
+    <file name="RestaurentCard.js" path="E:\EXPLORE-GIT-COURSE\namasteReactSwiggyApp\src\components\RestaurentCard.js">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="15" type="stmt"/>
+      <line num="17" count="15" type="stmt"/>
+      <line num="19" count="15" type="stmt"/>
+      <line num="22" count="15" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="37" count="4" type="stmt"/>
+      <line num="38" count="8" type="stmt"/>
+    </file>
   </project>
 </coverage>
