@@ -304,5 +304,5 @@ React Testing Library ()
 Besic Logic:
     We Render Somethig -> We Query Something -> We Assert Something.
 
-
+    beforeAll() and befroeEach()-> jest
 
